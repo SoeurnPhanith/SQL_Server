@@ -1,0 +1,69 @@
+1. What is Data Types?
+---> data type is define what kind of data column can stored.
+
+
+2. How many type of data type in SQLServer?
+---> In SQLServer Data Types is having 5 type : 
+    1. Numeric
+    2. String
+    3. Date & Time
+    4. Boolean Type
+    5. Binary Type
+
+
+3.Detail on Numeric type ? 
+| Data Type        | Storage                             | Range / Notes                                             | Example   |
+| ---------------- | ----------------------------------- | --------------------------------------------------------- | --------- |
+| **INT**          | 4 bytes                             | -2,147,483,648 to 2,147,483,647                           | 10, 100   |
+| **BIGINT**       | 8 bytes                             | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807  | 999999999 |
+| **SMALLINT**     | 2 bytes                             | -32,768 to 32,767                                         | 100       |
+| **TINYINT**      | 1 byte                              | 0 to 255                                                  | 10        |
+| **DECIMAL(p,s)** | 5–17 bytes                          | Exact decimal, p = total digits, s = digits after decimal | 12345.67  |
+| **NUMERIC(p,s)** | Same as DECIMAL                     | Same as DECIMAL                                           | 123.45    |
+| **FLOAT(n)**     | 4 bytes (n=1–24), 8 bytes (n=25–53) | Approximate, scientific numbers                           | 10.567    |
+| **REAL**         | 4 bytes                             | Approximate floating-point number                         | 3.14      |
+
+
+4. Detail on String type?
+| Data Type         | Storage / Length   | Notes                         | Example        |
+| ----------------- | ------------------ | ----------------------------- | -------------- |
+| **CHAR(n)**       | n bytes            | Fixed-length text, pad spaces | 'M'            |
+| **VARCHAR(n)**    | 0–n bytes          | Variable-length text          | 'Dara'         |
+| **VARCHAR(MAX)**  | Up to 2^31-1 bytes | Large text                    | Long text      |
+| **TEXT**          | Up to 2^31-1 bytes | Deprecated                    | Long paragraph |
+| **NCHAR(n)**      | 2 × n bytes        | Fixed-length Unicode          | N'អូន'         |
+| **NVARCHAR(n)**   | 2 × n bytes        | Variable-length Unicode       | N'Phnom Penh'  |
+| **NVARCHAR(MAX)** | Up to 2^31-1 chars | Large Unicode text            | N'Long text'   |
+| **NTEXT**         | Up to 2^30-1 chars | Deprecated                    | N'Long text'   |
+
+
+5. Detail on Date & Time type ? 
+| Data Type         | Storage   | Range / Notes                        | Example                     |
+| ----------------- | --------- | ------------------------------------ | --------------------------- |
+| **DATE**          | 3 bytes   | 0001-01-01 to 9999-12-31             | 2026-03-27                  |
+| **TIME**          | 3–5 bytes | 00:00:00.0000000 to 23:59:59.9999999 | 10:30:00                    |
+| **DATETIME**      | 8 bytes   | 1753-01-01 to 9999-12-31             | 2026-03-27 10:30            |
+| **DATETIME2**     | 6–8 bytes | 0001-01-01 to 9999-12-31             | 2026-03-27 10:30:00.1234567 |
+| **SMALLDATETIME** | 4 bytes   | 1900-01-01 to 2079-06-06             | 2026-03-27 10:30            |
+
+
+6. Detail on Boolean type? 
+| Data Type | Storage                           | Notes               | Example |
+| --------- | --------------------------------- | ------------------- | ------- |
+| **BIT**   | 1 bit (1–8 bits stored as 1 byte) | 0 = false, 1 = true | 0, 1    |
+
+
+7. Detail on Binary Type ? 
+| Data Type          | Storage / Length   | Notes                       | Example      |
+| ------------------ | ------------------ | --------------------------- | ------------ |
+| **BINARY(n)**      | n bytes            | Fixed-length binary data    | 0xA1B2       |
+| **VARBINARY(n)**   | 0–n bytes          | Variable-length binary data | 0xA1B2C3     |
+| **VARBINARY(MAX)** | Up to 2^31-1 bytes | Large binary                | File content |
+| **IMAGE**          | Up to 2^31-1 bytes | Deprecated                  | File content |
+
+
+8. What is Primary Key?
+---> Primary Key is a column (or a set of columns)
+in a table that uniquely identifies each row. 
+Each table can have only one primary key and
+primary key cannot contain NULL values.

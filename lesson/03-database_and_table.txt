@@ -1,0 +1,21 @@
+1. Syntax create database.
+---> CREATE DATABASE DatabaseName;
+
+
+2. Syntax to use database or stand on database
+---> USE DatabaseName;
+
+
+3. What is Table ?
+---> Table is like a spreadsheet inside a database and it store data like
+row(records) and store column (field).
+
+
+4. Syntax to create table
+---> CREATE TABLE TableName (
+        Column1 DataType [Constraints]or[Attribute],
+        Column2 DataType [Constraints]or[Attribute],
+        Column3 DataType [Constraints]or[Attribute],
+        ...
+    );
+

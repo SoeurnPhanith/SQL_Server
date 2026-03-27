@@ -1,0 +1,48 @@
+1.  What is Database?
+---> Database(DB) is a organized collection data that can be stored, 
+managed and accessed easily.
+
+
+2. Why using database? 
+---> We use database is for : 
+    - stored large amounts of data
+    - Access data quickly
+    - Keep data organized
+    - Can update and delete data easily
+    - provide security
+
+
+3. How many type of database? 
+---> Database is having two type : 
+    1. RDBMS (Relational Database Managment System)
+    2. NoSQL (Non-Relational Database)
+
+
+4. What is DBMS?
+---> DBMS (Database Managment System) is a software that allow use to create,
+managed, update and interact with database. Addition simple meaning DBMS is
+just a tool who work with database.
+
+
+5. What is SQLServer?
+---> SQLServer is a Relational Database Managment System (RDBMS) that 
+developed by Microsoft.
+
+
+6. What can SQLServer do?
+---> With SQLServer you can do something that : 
+    1. create database
+    2. create table
+    3. insert , update, delete data
+    4. Query data for filter follow what you want
+    5. create stored procedure
+    6. manage security
+
+
+7. Why using SQLServer? 
+---> We using SQLServer bacause : 
+    1. SQLServer very fast
+    2. High security
+    3. Handle large data
+    4. use in real companie or bank
+    
