@@ -1,0 +1,32 @@
+1. What is CRUD Operation? 
+---> CRUD is a set of 4 basic Operation used to manage 
+data in database. and CRUD is came from 4 word : 
+    1. C == Create / Insertt
+    2. R == Read / Select
+    3. U == Update
+    4. D == Delete
+
+2. Syntax to insert data in 1 records
+---> INSERT INTO TableName (Column1, Column2)
+     VALUES (Value1, Value2);
+
+3. Syntax to insert data in many records
+---> INSERT INTO TableName (Column1, Column2)
+     VALUES (Value1, Value2),
+            (Value1, Value2),
+            (Value1, Value2);
+
+4. Syntax to Select all column and records 
+---> SELECT * FROM TableName;
+
+5. Syntax to Select with Specific column
+---> SELECT Column1, Column2 FROM TableName;
+
+6. Syntax to Update data
+---> UPDATE TableName
+     SET Column1 = Value1
+     WHERE condition;
+
+7. Syntax to Delete
+---> DELETE FROM TableName
+     WHERE condition;

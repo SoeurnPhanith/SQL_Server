@@ -1,0 +1,53 @@
+1. What is Filtering? 
+---> Filtering is getting only the data you needed. 
+
+
+2. Keyword Where ? 
+---> Where is a core of filtering it used to filter rows base 
+one a condition. and condition you can use with another column 
+what you want to filter. Moreover it use some operator for filter like :
+    . =    (equal)
+    . >    (Greater than)
+    . <    (Less than)
+    . >=   (Greate or equal)
+    . <=   (Less or equal)
+    . != or <>  (not equal)
+
+    -Syntax : 
+        SELECT * FROM TableName 
+        WHERE condition operator value?
+
+
+3. Keyword AND, OR , NOT?
+---> These Keyword is used for combine condition. 
+    . Keyword AND (It's working when all condition must be true)
+    . Keyword OR (It's working when at least one condition is true)
+    . Keyword NOT (Reverse condition)
+
+
+4. Keyword BETWEEN? 
+---> BETWEEN used for filter within a range of data what you wanted.
+    -Syntax : 
+        SELECT * FROM TableName
+        WHERE condition BETWEEN value? AND value?;
+
+
+5. Keyword IN? 
+---> Keyword IN used when you want to match multiple value.
+    -Syntax : 
+        SELECT * FROM TableName
+        WHERE condition IN(value1,value2,value3);
+
+
+6. Keyword LIKE?
+---> Keyword like is used for filter data or search data 
+with text pattern(pattern matching) and it use with 2 symbol: 
+    | Symbol | Meaning          |
+    | ------ | ---------------- |
+    | %      | Any characters   |
+    | _      | Single character |
+
+. about symbol % use it in 3 side : 
+    1. %pattern : end by character?     
+    2. pattern%   : start by character?
+    3. %pattern%

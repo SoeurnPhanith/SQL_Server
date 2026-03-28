@@ -16,6 +16,12 @@ row(records) and store column (field).
         Column1 DataType [Constraints]or[Attribute],
         Column2 DataType [Constraints]or[Attribute],
         Column3 DataType [Constraints]or[Attribute],
-        ...
+        .....
     );
 
+
+5. Syntax Create table with Specific Database name
+---> CREATE TABLE DatabaseName.SchemaName.TableName (
+        Column1 DataType,
+        Column2 DataType
+    );
