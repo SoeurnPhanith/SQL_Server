@@ -30,3 +30,7 @@ data in database. and CRUD is came from 4 word :
 7. Syntax to Delete
 ---> DELETE FROM TableName
      WHERE condition;
+
+8. Alter Column 
+---> ALTER Table TableName 
+     ADD columnName;

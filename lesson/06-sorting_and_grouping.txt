@@ -1,0 +1,30 @@
+1. Sorting? 
+---> Sorting is used for sort result. 
+    -Syntax : 
+    SELECT * FROM TableName 
+    ORDER BY ColumnName ASC|DESC
+
+
+
+2. Aggregate Function? 
+---> Aggregate Function is a function reduce many row to one value. Normally about Keyword
+to remember is many->one.
+    - Aggregate Function is having 5 function : 
+        1. SUM() 
+        2. AVG()
+        3. COUNT()
+        4. MIN()
+        5. MAX()
+    -Syntax : 
+        SELECT Aggregate_Function(Column or *) FROM TableName;
+
+3. Group By?
+---> Group by is used for split data in to group. Normally we use Group by 
+with Aggregate_Function for know data with it's group.
+    -Syntax :
+        SELECT ColumnName , Aggregate_Function 
+        FROM TableName GROUP BY columnName;
+
+4. Having?
+---> Having is used for filter grouping data after group. it's similar WHERE but Having is
+filter or find data after group data and about WHERE is filter before grouping data.
