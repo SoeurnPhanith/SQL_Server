@@ -1,4 +1,45 @@
 1. What is SubQuery?
 ---> SubQuery is a query inside another query.
 
-2. How many type of SubQuery
+2. How many type of SubQuery?
+---> In SQLServer SubQuery having 2 type : 
+    - Single row SubQuery
+    - multiple row SubQuery
+
+3. Why using SubQuery?
+---> We using SubQuery when : 
+    - We don’t know the value yet → we must calculate it first.
+      Sometimes the value we need changes all the time.
+      Example: Highest price, latest date, maximum score
+      so we need database to for own work no need to change value everytime.
+    - get dynamic value When the value comes from another table or calculation
+    - Complex filtering or conditional logic
+
+4. What Single Row SubQuery?
+--->  Single Row SubQuery is returns only one value.It’s used when the outer query
+expects a single value. Operator always use : 
+    = , < , > , <= , >= , <>
+
+    -Syntax and flow of work : 
+    *   SELECT column_name
+        FROM table_name
+        WHERE column_name operator (
+            SELECT single_column
+            FROM table_name
+            WHERE condition
+        );
+
+    
+    Example:
+    SELECT * FROM Products
+    WHERE Price = (
+        SELECT MAX(Price) FROM Products
+    );
+
+    * It's work in inner query first and take it to compare or
+    matching with outer query and show result.
+
+5. What is multiple row SubQuery?
+---> multiple row SubQuery is returns more than one value (multiple rows).
+Because it returns many values, we CANNOT use (=) We must use special operators like:
+    IN, NOT IN, ANY, ALL

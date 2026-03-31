@@ -18,3 +18,6 @@ SELECT sc.Id,
        c.StartingDate
 FROM dbo.StudentCourse sc
 INNER JOIN dbo.Course c ON sc.Id = c.CourseId;
+
+
+CREATE DATABASE AdvanceDB;
