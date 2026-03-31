@@ -1,0 +1,4 @@
+1. What is SubQuery?
+---> SubQuery is a query inside another query.
+
+2. How many type of SubQuery
