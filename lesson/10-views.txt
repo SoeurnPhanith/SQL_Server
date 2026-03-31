@@ -1,0 +1,38 @@
+1. What is Views?
+---> Views is a virtaul table. It's not stock original data and show data
+from original table like mirror.
+
+2. Why using Views?
+---> We are using Views for : 
+    - កាត់បន្ថយការសរសេរ query ដែលស្មុគស្មាញដូច​ JOIN , HAVING....ច្រើនដងដដែលៗ
+    - វា​មានលក្ខណះ Secure ព្រោះអាចបង្ហាញតែ Column ណា ដែលចាំបាច់ទៅកាន់​User ប៉ុណ្ណោះ
+    - Reuseable វាអាចប្រើប្រាស់ query នោះបានច្រើនដងលើ ឈ្មោះView តែមួយ
+    - មិនបង្ហាញ Structure ពិតរបស់Table
+
+3. Syntax create Views?
+---> Syntax : 
+    CREATE VIEW view_name AS
+    SELECT column1, column2, ...
+    FROM table_name
+    WHERE condition;
+
+4. Update View?
+---> View អាច update បាន ប្រសិនបើ៖
+    - View បានយោងតែ table មួយ តែប៉ុណ្ណោះ។
+    - មិនមាន៖
+        Functions aggregate (SUM(), COUNT(),...)
+        DISTINCT
+        GROUP BY
+        HAVING
+        JOIN (លុះត្រាផ្សេង)
+        Subquery ក្នុង SELECT
+    - អ្នក update តែ columns ដែលមានក្នុង table មូលដ្ឋាន។
+
+    -Syntax : 
+        UPDATE ViewName
+        SET Column1 = Value1,
+            Column2 = Value2
+        WHERE SomeCondition;
+
+    **ពេលអ្នក UPDATE តាម View ដែលអាច Update បាន (Updatable View),
+     ការ UPDATE នោះ នឹងបញ្ចូលទៅកាន់ Table មូលដ្ឋានផ្ទាល់។
