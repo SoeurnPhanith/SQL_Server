@@ -122,7 +122,7 @@ INSERT INTO dbo.Products(Name, Price, Quantity, category) VALUES
 ('T-shirt Black',22,20,'Clothes'),
 ('Dress Red',40,15,'Clothes'),
 ('Jeans Slim',45,18,'Clothes'),
-('Sneakers White',110,12,'Clothes'),
+('Sneakers White',110,12,'Clothes'),    
 ('Jacket Leather',150,6,'Clothes'),
 ('Cap Sport',18,25,'Clothes'),
 ('Shorts',25,30,'Clothes'),
@@ -209,7 +209,7 @@ FROM dbo.Products
 GROUP BY Price
 HAVING SUM(Price) > 20
 ORDER BY Price DESC;
-
+    
 SELECT 
     category,
     SUM(Price) AS TotalPrice

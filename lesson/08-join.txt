@@ -1,0 +1,20 @@
+1. What is Join? 
+---> Join a feature in database to used for combine row from two or more 
+table based on related column between them. but when using join all 
+table is must be having relationship.
+
+2. Type of Join?
+---> In SQL join having 4 type: 
+    1. inner join 
+    2. left join 
+    3. right join 
+    4. full join
+
+3. Inner Join?
+---> INNER JOIN returns only the rows where there is a match in both
+tables based on a condition (usually a foreign key).
+    -syntax : 
+        SELECT columns1, column2, column3...
+        FROM TableA a
+        INNER JOIN TableB b
+        ON a.Key = b.Key;

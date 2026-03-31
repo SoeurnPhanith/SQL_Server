@@ -1,0 +1,30 @@
+1. What is relationship table?
+---> relationship table is a table having related with other table.
+
+2. Foreign Key (FK)? 
+---> Foreign Key (FK) is a column that points to another 
+table's primary key.
+Think Like This:
+    PK = Identity
+    FK = Reference (link)
+
+3. How many type of relationship table?
+---> In relationship table having 3 side : 
+    - One to One
+    - One to Many
+    - Many to Many
+
+4. One to One? 
+---> One to One that meaning one record in table A is equal one record
+in table B. For example about person : One person having on Passport.
+Additional we use for one to one when we want to seperate data of large
+data it's optional but recommend.
+
+5. One to Many?
+---> One to Many that meaning one record in table A is having 
+many or another record in table B.
+
+6. Many to Many?
+---> Many to Many that meaning many record in table A is having many
+record in table B and it must be having bridge table for todo it 
+becuase it can not do that directly.
