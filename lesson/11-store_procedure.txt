@@ -1,0 +1,17 @@
+1. What is Store Procedure?
+---> Store Procedure គឺជា​​​​ SQL command មួយក្រុម ដែលយើង save នៅក្នុង database
+ហើយអាច call ប្រើម្តងហើយម្តងទៀត ដែលវាមានលក្ខណះស្រដៀងទៅនឹង function ក្នុង​Programmingដែរ​​។
+
+2. Why using Store Procedure?
+---> We use store Procedure Because : 
+    - Reuseable of query
+    - good speed and performance 
+    - security not expose table directly
+    - Easy to update and maintaince
+
+3. Syntax to create store Procedure? 
+---> CREATE PROCEDURE ProcedureName
+     AS
+     BEGIN
+        -- SQL Query here
+     END;    
