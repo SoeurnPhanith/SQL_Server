@@ -1,0 +1,104 @@
+1. What is functions?
+---> Functions is a block sql code that show result depend on input value from parameter.
+
+2. How many type of function in SQL?
+---> In SQL server function having 3 type : 
+    - Scalar Function
+    - Inline Table-Value-Function (TVF)
+    - Multi-Statement Table-Valuef-Function
+
+3. When using function in sql?
+---> We using function when : 
+    - calculate something or tranform data
+    - encapsulate logic of query for Reuseable
+    - USE select, where, filter, join...
+    - return table to store for reduce
+
+4. How different of function and store Procedure? 
+---> Here is answer of different both of them : 
+
+| Feature                       | Stored Procedure (SP)                                    | Function (FN)                                                                 |
+| ------------------------------| -------------------------------------------------------- | -----------------------------------------------------------------------------   |
+| -Purpose                      | Execute SQL statements, CRUD, complex logic, transaction | Return a value (scalar) ឬ table, reusable logic inside SELECT/WHERE/JOIN        |
+| -Return Value                 | Optional (can return status code)                        | Must return value (scalar or table)                                             |
+| -Can Modify Data?             | ✅ Yes (INSERT/UPDATE/DELETE)                            | ❌ No (cannot modify table directly, except some table-valued function tricks)  |
+| -Use in SELECT/WHERE/JOIN     | ❌ Cannot directly                                       | ✅ Can be used anywhere an expression/table is expected                         |
+| -Parameters                   | Input / Output / Return                                  | Input only (Return value used for output)                                       |
+| -Transactions                 | ✅ Fully supported (BEGIN, COMMIT, ROLLBACK)             | ❌ Limited (cannot control DB transactions inside)                              |
+| -Execution                    | EXEC ProcedureName                                       | SELECT dbo.FunctionName()                                                       |
+| -Performance                  | Precompiled, good for multiple operations                | Precompiled, optimized for single value or table                                |
+| -Error Handling               | TRY-CATCH available                                      | Limited error handling                                                          |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*****Key Concept
+->Function → mainly read / calculation / reusable expression
+->Stored Procedure → mainly execute / modify / business logic / transaction
+    or 
+->SP = “do something”, Function = “give something”
+
+5. About Scalar Function? 
+---> Scalar Function is a function can be return only one value and it's use for
+calculating, formatting, converting.....
+    -Syntax : 
+        CREATE FUNCTION FunctionName
+        (
+            @Parameter1 DataType,
+            @Parameter2 DataType
+        )
+        RETURNS ReturnDataType
+        AS
+        BEGIN
+            -- logic here(value)
+            RETURN some_value
+        END;
+
+6. About Inline Table-Value-Function(TVF)?
+---> TVF or Table-Value-Function is a functino can be return table or 
+query select data from table and we always use it when want to select data
+or filter data by parameter of function and high query.
+    - Syntax : 
+        CREATE FUNCTION FunctionName (@param datatype)
+        RETURNS TABLE
+        AS
+        RETURN
+        (
+            SELECT column1, column2
+            FROM TableName
+            WHERE condition
+        );
+
+    + Compare TVF and View
+| Feature     |  View    | Inline TVF   |
+| ----------- | ---------| ------------ |
+| Parameter   | ❌ No    | ✅ Yes       |
+| Performance | Good     | 🔥 Very Good |
+| Flexibility | Low      | High         |
+
+
+7. About multi-statements table-value-function?
+---> multi-statements table-value-function is a function can be return 
+table but having many logic query, insert, if else, or something...
+    - Syntax : 
+    CREATE FUNCTION FunctionName (@param datatype)
+    RETURNS @Result TABLE
+    (
+        column1 datatype,
+        column2 datatype
+    )
+    AS
+    BEGIN   
+        -- logic here
+
+        INSERT INTO @Result
+        SELECT ...
+
+        RETURN;
+    END;
+
+
+    +Compare
+| Feature     | Inline TVF | Multi TVF |
+| ----------- | ---------- | --------- |
+| Syntax      | simple     | complex   |
+| Logic       | ❌ no IF   | ✅ yes IF |
+| Performance | 🔥 fast    | slower    |
+| Flexibility | low        | high      |

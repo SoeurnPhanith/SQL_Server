@@ -15,3 +15,10 @@
      BEGIN
         -- SQL Query here
      END;    
+
+4. When we use store Procedure? 
+    *Modify Data : Insert / Update / Delete → SP can do it safely
+    *Multiple Steps / Business Logic  : Example: Insert order + update stock + log activity
+    *Transactions : BEGIN, COMMIT, ROLLBACK → SP handles it
+    *Security / Permission Control  : User executes SP but cannot access tables directly    
+    *Reuse Logic / Maintenance : Centralized code → easy to update, use in multiple applications
