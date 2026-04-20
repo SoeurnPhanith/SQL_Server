@@ -21,3 +21,9 @@ INNER JOIN dbo.Course c ON sc.Id = c.CourseId;
 
 
 CREATE DATABASE AdvanceDB;
+
+select sc.id, 
+       c.Name as CourseName
+       c.Price as coursePrice
+from dbo.StudentCourse
+inner join dbo.Course c on sc.id = c.CourseId;

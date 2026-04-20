@@ -116,7 +116,7 @@ WHERE CreatedDate >= '2026-03-24'
       SELECT MAX(CreatedDate)
       FROM dbo.Product
       WHERE CreatedDate < '2026-03-30'
-  );
+);
 
 --want to know having many product created from today to last 5 days
 SELECT *

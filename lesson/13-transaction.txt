@@ -1,0 +1,73 @@
+1. What is Transactions?
+---> Transactions is a SQL work flow and group of sql statements that having two side
+if success it's save and commit but if unsuccess it's error and rollback.
+moreover transaction is atomic operations(ACID).
+
+2. Command or Keyword using in Transactions? 
+---> in transaction is having 3 command to use : 
+| Command             | Purpose                  |
+| ------------------- | ------------------------ |
+| `BEGIN TRANSACTION` | Start a transaction      |
+| `COMMIT`            | Save changes permanently |
+| `ROLLBACK`          | Cancel all changes       |
+
+3. flow of transactions in databasee?
+START TRANSACTION
+      │
+      ▼
++-------------------+
+| BEGIN TRANSACTION |  ← ចាប់ផ្តើម transaction
++-------------------+
+      │
+      ▼
+Check Pre-conditions / Business Logic
+      │
+      ▼
++-----------------------------+
+| Errors Occur?               |
+|-----------------------------|
+| Yes → ROLLBACK             |
+| No  → Continue Processing  |
++-----------------------------+
+      │
+      ▼
+Perform SQL Statements
+(INSERT / UPDATE / DELETE)
+      │
+      ▼
++-----------------------------+
+| Savepoint?                  |
+|-----------------------------|
+| Yes → Partial Rollback      |
+| No  → Continue              |
++-----------------------------+
+      │
+      ▼
+Check Errors Again
+      │
+      ▼
++-----------------------------+
+| Errors Occur?               |
+|-----------------------------|
+| Yes → ROLLBACK              |
+| No  → COMMIT                |
++-----------------------------+
+      │
+      ▼
+END TRANSACTION
+
+
+4. When using Transactions? 
+---> We use Transactions when : 
+      - having many query work in same time (multiple query)
+      - need success all or fail all
+
+5. Syntax for Transactions? 
+---> Syntax
+      BEGIN TRANSACTION;
+
+      -- SQL operations
+      
+      COMMIT;   -- save changes
+      -- OR
+      ROLLBACK; -- undo changes

@@ -106,7 +106,6 @@ END;
 GO
 
 
-
 --Using all procedure
 EXEC GetAllCategory;
 EXEC GetAllProductHavingFoodCategory;
