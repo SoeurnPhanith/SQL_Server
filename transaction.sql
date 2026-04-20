@@ -179,7 +179,7 @@ END CATCH;
 
 
 
----View result order and payment
+---View result order and paymentSELECT * FROM dbo.Product;
 SELECT * FROM dbo.Orders;
 
 SELECT * FROM dbo.Payment;

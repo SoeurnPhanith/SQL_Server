@@ -1,0 +1,17 @@
+1. What is Index in SQL Server? 
+---> Index គឺជា “data structure” ដែលជួយឲ្យ database search data
+បានលឿនជាងមុន ដោយមិនចាំបាច់ scan whole table។ ប្រសិនបើមិនប្រើប្រាស់ index 
+database វានឹងធ្វើរការ Scan all row in table ហើយវានឹងដំណើរការយឺតប្រសិន
+បើនៅក្នុង database មានទិន្នន័យច្រើន។​ 
+
+2.Why Index is Important?
+---> Index is very Important becuase of : 
+    ✔ Faster SELECT queries
+    ✔ Faster WHERE filtering
+    ✔ Faster JOIN operations
+    ✔ Improves performance for large data
+
+3. Type of Index? 
+---> Index in database having 2 type : 
+    1. Clustered Index
+    2. Non-Clustered Index
